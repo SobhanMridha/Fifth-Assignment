@@ -10,7 +10,7 @@ document.getElementById("donation-btn").addEventListener("click", function () {
   document.getElementById("donation-page").classList.remove("hidden");
 });
 
-// Donation function
+// Noakhali donation
 
 document
   .getElementById("noakhali-donation")
@@ -21,22 +21,31 @@ document
       stopImmediatePropagation();
     }
 
-    let total = findTotalDonation("noakhali-total-donation");
-
-    let main_balance = findTotalDonation("available-balance");
-
-    if (main_balance < amount) {
-      alert("The amount cannot be donated");
-    } else {
-
-      total += amount;
-      document.getElementById("noakhali-total-donation").innerText = total;
-
-      main_balance -= amount;
-      document.getElementById("available-balance").innerText = main_balance;
-
-      
-    }
+    donation("noakhali-total-donation", amount);
   });
 
-  
+//   Feni donation
+
+document.getElementById("feni-donation").addEventListener("click", function () {
+  let amount = getDonationAmount("feni-donation-amount");
+
+  if (amount == -1) {
+    stopImmediatePropagation();
+  }
+
+  donation("feni-total-donation", amount);
+});
+
+// Quota donation
+
+document
+  .getElementById("quota-donation")
+  .addEventListener("click", function () {
+    let amount = getDonationAmount("quota-donation-amount");
+
+    if (amount == -1) {
+      stopImmediatePropagation();
+    }
+
+    donation("quota-total-donation", amount);
+  });

@@ -26,3 +26,21 @@ function findTotalDonation(id) {
 }
 
 
+// Donation function
+
+function donation(id, amount) {
+    let total = findTotalDonation(id);
+  
+    let main_balance = findTotalDonation("available-balance");
+  
+    if (main_balance < amount) {
+      alert("The amount cannot be donated");
+    } else {
+      total += amount;
+      document.getElementById(id).innerText = total;
+  
+      main_balance -= amount;
+      document.getElementById("available-balance").innerText = main_balance;
+    }
+  }
+
