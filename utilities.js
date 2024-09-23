@@ -60,8 +60,9 @@ function donation(id, amount, location) {
     newDiv.appendChild(newH1);
     newDiv.appendChild(newP);
     
-
+    document.getElementById('no-donation').classList.add('hidden');
     document.getElementById('history-page').appendChild(newDiv);
+    my_modal_5.showModal();
   }
 
 }

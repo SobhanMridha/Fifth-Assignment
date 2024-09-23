@@ -205,15 +205,32 @@
             </button>
           </div>
         </div>
+
+        <dialog id="my_modal_5" class="modal sm:modal-middle sm:mx-0 mx-auto">
+          <div class="modal-box">
+            <h1 class="sm:text-5xl text-4xl font-extrabold text-center">Congrates!</h1>
+            <img class="w-12 mx-auto my-4" src="assets/coin.png" alt="">
+            <p class="text-base font-medium text-center pb-4">You Have Donated for Humanking</p>
+            <h2 class="text-2xl font-extrabold text-center pb-4">Successfully</h2>
+            <form method="dialog">
+              <button class="btn sm:ml-[150px] ml-[70px]">close confirmation</button>
+            </form>
+          </div>
+        </dialog>
       </section>
       <!-- donate-now section end  -->
 
-      <section class="hidden" id="history-page"></section>
+      <section class="hidden" id="history-page">
+        <div id="no-donation">
+          <img class="w-[600px] mx-auto" src="assets/Donate.jpg" alt="" />
+          <h1 class="text-6xl font-extrabold text-center pt-7 sm:pb-32">NO DONATION AVAILABLE</h1>
+        </div>
+      </section>
 
       <script src="dom.js"></script>
       <script src="utilities.js"></script>
     </main>
 
-    <footer></footer>
+    <!-- <footer class="bg-[#F9F7F3] h-32"></footer> -->
   </body>
 </html>
