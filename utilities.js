@@ -9,7 +9,7 @@ function getDonationAmount(id) {
   }
   money = parseFloat(money);
 
-  if (money < 0) {
+  if (money <= 0) {
     alert("Invalid Donation Amount");
     return -1;
   }
