@@ -41,6 +41,26 @@ function donation(id, amount) {
   
       main_balance -= amount;
       document.getElementById("available-balance").innerText = main_balance;
-    }
+
+      // history
+    
+    let newDiv = document.createElement('div');
+    let newH1 = document.createElement('h1');
+    let newP = document.createElement('p');
+    let data = new Date();
+
+    newDiv.classList.add('p-8', 'border', 'rounded-2xl', 'w-fit', 'mx-auto', 'my-6');
+    newH1.classList.add('text-xl', 'font-bold', 'pb-4');
+    newP.classList.add('text-base', 'text-[#111111B2]', 'font-light');
+    
+    newH1.innerText = '96500 Taka is Donated for famine-2024 at Feni, Bangladesh';
+    newP.innerText = 'Date : ' + data;
+    
+    newDiv.appendChild(newH1);
+    newDiv.appendChild(newP);
+    
+
+    document.getElementById('history-page').appendChild(newDiv);
   }
 
+}
