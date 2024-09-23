@@ -35,16 +35,17 @@
         </div>
         <div class="flex items-center gap-2">
           <img src="assets/coin.png" alt="" />
-          <p class="text-[#111111B2] text-[20px] font-medium">12300 BDT</p>
+          <p class="text-[#111111B2] text-[20px] font-medium" id="available-balance">12300</p>
+          <p class="text-[#111111B2] text-[20px] font-medium" id="available-balance">BDT</p>
         </div>
       </nav>
       <!-- nav-bar section end  -->
 
       <!-- donation and history section start  -->
-      <section class="text-center mt-24">
+      <section class="text-center sm:mt-24 mt-12">
         <div class="space-x-4">
-          <button class="btn btn-lg bg-[#B4F461] hover:bg-[#B4F461]">Donation</button>
-          <button class="btn btn-lg">History</button>
+          <button class="btn btn-lg bg-[#B4F461] hover:bg-[#B4F461]"  id="donation-btn">Donation</button>
+          <button class="btn btn-lg" id="history-btn">History</button>
         </div>
       </section>
       <!-- donation and history section end  -->
@@ -52,17 +53,18 @@
 
     <main>
       <!-- donate-now section start  -->
-      <section>
+      <section id="donation-page">
         <div
-          class="flex justify-center items-start border p-8 my-8 w-fit rounded-2xl mx-auto gap-8"
+          class="sm:flex justify-center items-start border p-8 my-8 w-fit rounded-2xl sm:mx-auto mx-4 gap-8 "
         >
           <div><img src="assets/noakhali.png" alt="" /></div>
-          <div class="w-[500px]">
+          <div class="sm:w-[500px]">
             <div
-              class="flex items-center gap-2 px-4 py-[10px] bg-[#1111110D] w-fit rounded-lg"
+              class="flex items-center gap-2 px-4 py-[10px] bg-[#1111110D] w-fit rounded-lg sm:mt-0 mt-4"
             >
               <img src="assets/coin.png" alt="" />
-              <p class="text-[#111111B2] text-base font-normal">0 BDT</p>
+              <p class="text-[#111111B2] text-base font-normal" id="noakhali-total-donation">1200</p>
+              <p class="text-[#111111B2] text-base font-normal">BDT</p>
             </div>
             <h1 class="text-xl font-bold py-4">
               Donate for Flood at Noakhali, Bangladesh
@@ -79,18 +81,19 @@
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered w-full text-base text-[#11111166] font-light mt-6 mb-4"
+              id="noakhali-donation-amount"
             />
-            <button class="btn w-full text-xl font-semibold bg-[#B4F461] hover:bg-[#B4F461]">Donate Now</button>
+            <button class="btn w-full text-xl font-semibold bg-[#B4F461] hover:bg-[#B4F461]" id="noakhali-donation">Donate Now</button>
           </div>
         </div>
 
         <div
-          class="flex justify-center items-start border p-8 my-8 w-fit rounded-2xl mx-auto gap-8"
+          class="sm:flex justify-center items-start border p-8 my-8 w-fit rounded-2xl sm:mx-auto mx-4 gap-8"
         >
           <div><img src="assets/feni.png" alt="" /></div>
-          <div class="w-[500px]">
+          <div class="sm:w-[500px]">
             <div
-              class="flex items-center gap-2 px-4 py-[10px] bg-[#1111110D] w-fit rounded-lg"
+              class="flex items-center gap-2 px-4 py-[10px] bg-[#1111110D] w-fit rounded-lg sm:mt-0 mt-4"
             >
               <img src="assets/coin.png" alt="" />
               <p class="text-[#111111B2] text-base font-normal">600 BDT</p>
@@ -118,12 +121,12 @@
         </div>
 
         <div
-          class="flex justify-center items-start border p-8 my-8 w-fit rounded-2xl mx-auto gap-8"
+          class="sm:flex justify-center items-start border p-8 my-8 w-fit rounded-2xl sm:mx-auto mx-4 gap-8"
         >
           <div><img src="assets/quota-protest.png" alt="" /></div>
-          <div class="w-[500px]">
+          <div class="sm:w-[500px]">
             <div
-              class="flex items-center gap-2 px-4 py-[10px] bg-[#1111110D] w-fit rounded-lg"
+              class="flex items-center gap-2 px-4 py-[10px] bg-[#1111110D] w-fit rounded-lg sm:mt-0 mt-4"
             >
               <img src="assets/coin.png" alt="" />
               <p class="text-[#111111B2] text-base font-normal">2400 BDT</p>
@@ -152,7 +155,17 @@
         </div>
       </section>
       <!-- donate-now section end  -->
+
+      <section class="hidden" id="history-page">
+      <h1 class="text-5xl text-center">Hi</h1>
+      </section>
+
+      <script src="dom.js"></script>
+      <script src="utilities.js"></script>
     </main>
-    <footer></footer>
+
+    <footer class="bg-[#F9F7F3] h-32 ">
+
+    </footer>
   </body>
 </html>
