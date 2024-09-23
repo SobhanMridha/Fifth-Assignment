@@ -25,7 +25,13 @@ document
       stopImmediatePropagation();
     }
 
-    donation("noakhali-total-donation", amount);
+    donation(
+      "noakhali-total-donation",
+      amount,
+      "Flood at Noakhali, Bangladesh."
+    );
+
+    document.getElementById("noakhali-donation-amount").value = "";
   });
 
 //   Feni donation
@@ -37,7 +43,9 @@ document.getElementById("feni-donation").addEventListener("click", function () {
     stopImmediatePropagation();
   }
 
-  donation("feni-total-donation", amount);
+  donation("feni-total-donation", amount, "Flood Relief in Feni, Bangladesh.");
+
+  document.getElementById("feni-donation-amount").value = "";
 });
 
 // Quota donation
@@ -51,5 +59,11 @@ document
       stopImmediatePropagation();
     }
 
-    donation("quota-total-donation", amount);
+    donation(
+      "quota-total-donation",
+      amount,
+      "Injured in the Quota Movement, Bangladesh."
+    );
+
+    document.getElementById("quota-donation-amount").value = "";
   });
